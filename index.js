@@ -27,7 +27,6 @@ jQuery(document).ready(function () {
     jQuery(".link").addClass("decor");
     jQuery(".link1").removeClass("decor");
     jQuery(".link2").removeClass("decor");
-    // jQuery(".bottom__line").removeClass("bottom__active1 bottom__active2");
   });
 
   //  Second active item
@@ -35,16 +34,13 @@ jQuery(document).ready(function () {
     jQuery(".link1").addClass("decor");
     jQuery(".link").removeClass("decor");
     jQuery(".link2").removeClass("decor");
-    // jQuery(".bottom__line").removeClass("bottom__active bottom__active2");
   });
 
   // Third active item
   jQuery(".menu--item__three").click(function () {
-    // jQuery(".bottom__line").addClass("bottom__active2");
     jQuery(".link2").addClass("decor");
     jQuery(".link").removeClass("decor");
     jQuery(".link1").removeClass("decor");
-    // jQuery(".bottom__line").removeClass("bottom__active bottom__active1");
   });
 
   // nav toggle
@@ -64,4 +60,36 @@ jQuery(document).ready(function () {
     jQuery("img.search-imgg").toggleClass("active");
   });
   
+// navbar scroll
+jQuery(document).scroll(function () {
+  var scroll_counter = jQuery(this).scrollTop();
+  if (scroll_counter > 1) {
+    jQuery(".icc").css("height", "70px");
+    jQuery(".nav-toggle").css("height", "70px");
+  } else {
+    jQuery(".icc").css("height", "100px");
+    jQuery(".nav-toggle").css("height", "100px");
+  }
+});
+
+
+
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+
 });
