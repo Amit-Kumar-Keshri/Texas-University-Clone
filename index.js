@@ -48,7 +48,8 @@ jQuery(document).ready(function () {
   });
 
   // nav toggle
-  document.querySelector("nav .container .nav-toggle")
+  document
+    .querySelector("nav .container .nav-toggle")
     .addEventListener("click", () => {
       document
         .querySelector("nav .container .nav-toggle span")
@@ -57,18 +58,10 @@ jQuery(document).ready(function () {
         .querySelector("nav .container .nav-links")
         .classList.toggle("active");
     });
-  // document.querySelector("nav .container .nav-links ")
-  //   .addEventListener("click", () => {
-  //     document
-  //       .querySelector("nav .container .nav-toggle span")
-  //       .classList.toggle("active");
-  //     document
-  //       .querySelector("nav .container .nav-links")
-  //       .classList.toggle("active");
-  //   });
 
-  var changeClass = function (name) {
-    jQuery("#search, #nav ul").removeAttr("class").addClass(name);
-  };
+  jQuery(".omm").click(function () {
+    jQuery(".onscreen-box").toggle("slide");
+    jQuery("img.search-imgg").toggleClass("active");
+  });
+  
 });
-
