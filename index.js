@@ -59,42 +59,36 @@ jQuery(document).ready(function () {
     jQuery(".onscreen-box").toggle("slide");
     jQuery("img.search-imgg").toggleClass("active");
   });
-  
-// navbar scroll
-jQuery(document).scroll(function () {
-  var scroll_counter = jQuery(this).scrollTop();
-  if (scroll_counter > 1) {
-    jQuery(".icc").css("height", "70px");
-    jQuery(".nav-toggle").css("height", "70px");
-    jQuery("nav .container .nav-logo img").css("width", "80%");
 
-
-  } else {
-    jQuery(".icc").css("height", "100px");
-    jQuery(".nav-toggle").css("height", "100px");
-    jQuery("nav .container .nav-logo img").css("width", "100%");
-
-  }
-});
-
-
-
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
+  // navbar scroll
+  jQuery(document).scroll(function () {
+    var scroll_counter = jQuery(this).scrollTop();
+    if (scroll_counter > 1) {
+      jQuery(".icc").css("height", "70px");
+      jQuery(".nav-toggle").css("height", "70px");
+      jQuery("nav .container .nav-logo img").css("width", "80%");
     } else {
-      reveals[i].classList.remove("active");
+      jQuery(".icc").css("height", "100px");
+      jQuery(".nav-toggle").css("height", "100px");
+      jQuery("nav .container .nav-logo img").css("width", "100%");
+    }
+  });
+
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
     }
   }
-}
 
-window.addEventListener("scroll", reveal);
-
+  window.addEventListener("scroll", reveal);
 });
