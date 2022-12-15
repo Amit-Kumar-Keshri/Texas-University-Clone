@@ -6,22 +6,20 @@
 }
 
 body {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background-color: #f2f2f2;
   color: #fff;
-  font-family: o;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.45;
   font-style: normal;
   word-wrap: break-word;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  outline: 3px solid limegreen !important;
 }
-p{
+h1, h2, h3, h4{
   font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
 }
 .main-container {
   background-image: url("img/Photo-8.jpg");
@@ -335,7 +333,7 @@ ul.sec1-ul {
   border-left: 2px solid #fff;
 }
 .sec2-ctn {
-  padding: 0 20px;
+  padding: 0 60px;
   width: 90%;
 }
 .sec2-ctn1 h1 {

@@ -3,7 +3,7 @@ jQuery(document).ready(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     responsive: [
       {
         breakpoint: 1200,
@@ -66,9 +66,14 @@ jQuery(document).scroll(function () {
   if (scroll_counter > 1) {
     jQuery(".icc").css("height", "70px");
     jQuery(".nav-toggle").css("height", "70px");
+    jQuery("nav .container .nav-logo img").css("width", "80%");
+
+
   } else {
     jQuery(".icc").css("height", "100px");
     jQuery(".nav-toggle").css("height", "100px");
+    jQuery("nav .container .nav-logo img").css("width", "100%");
+
   }
 });
 
