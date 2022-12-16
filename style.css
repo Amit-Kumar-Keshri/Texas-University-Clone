@@ -773,6 +773,11 @@ img.search-imgg.active {
   .slick-next:before {
     content: "→";
   }
+  .slick-next, .slick-prev{
+
+ z-index: 2;
+
+}
   /************ sec3 ***************/
   .sec3-1 {
     display: none;
